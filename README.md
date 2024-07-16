@@ -85,7 +85,20 @@ Although your friend has an excellent understanding of property prices in her ow
 
 ## Hypothesis and how to validate?
 
-* List here your project hypothesis(es) and how you envision validating it (them).
+*Hypothesis One*
+-  It is considered that houses with a similar square footing but higher overall quality of materials and finish and a higher overall condition would have a higher sales price.
+
+*Hypothesis Two*
+-  It is considered that those houses in a similar condition but with a higher number of bedrooms above grade, would have a higher sales price
+
+*Hypothesis Three*
+- It is considered that houses of a similar size and number of bedrooms would have a higher sale price the more recently they were built. 
+
+*Hypothesis Four*
+- It is considered that houses with higher square footing of finished Basement area and a higher rating of the basement area would have a higher sales price
+
+*Hypothesis Five*
+- It is considered that remodeled houses of a similar size, built at a similar time, would have a higher sale price the more recently the remodelling was completed. 
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
 
