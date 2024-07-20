@@ -86,19 +86,27 @@ Although your friend has an excellent understanding of property prices in her ow
 ## Hypothesis and how to validate?
 
 *Hypothesis One*
--  It is considered that houses with a similar square footing but higher overall quality of materials and finish and a higher overall condition would have a higher sales price.
+- It is considered that the Lot area of the property would correlate positvely with the sale price. 
 
 *Hypothesis Two*
--  It is considered that those houses in a similar condition but with a higher number of bedrooms above grade, would have a higher sales price
+- It is considered that the overall condition of the property would positively correlate with the sale price.
 
 *Hypothesis Three*
-- It is considered that houses of a similar size and number of bedrooms would have a higher sale price the more recently they were built. 
+-  It is considered that houses with a similar square footing but higher overall quality of materials and finish and a higher overall condition would have a higher sales price.
 
 *Hypothesis Four*
-- It is considered that houses with higher square footing of finished Basement area and a higher rating of the basement area would have a higher sales price
+-  It is considered that those houses in a similar condition but with a higher number of bedrooms above grade, would have a higher sales price
 
 *Hypothesis Five*
-- It is considered that remodeled houses of a similar size, built at a similar time, would have a higher sale price the more recently the remodelling was completed. 
+- It is considered that houses of a similar size and number of bedrooms would have a higher sale price the more recently they were built. 
+
+### Validation
+
+#### Correlation Analysis
+For hypotheses one and two, the easiest way to validate these will be through the correlation study carried out as part of addressing the first part of our business requirement. By using the Pearson & Spearman methods to calculate correlation levels for the features within our dataset and by generating heatmaps for the results we will be able to clearly confirm for each hypothesis whether the specified features are correlated or not as we assume.
+
+#### Regression Analysis 
+Our next three hypotheses will require the finshed and optimized ML model to perform a regression analysis for the selected features. We can then specify the features we wish to keep the same and which we want to vary in order to test our hypotheses to confirm our deny our assumptions. 
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
 
