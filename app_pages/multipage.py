@@ -1,12 +1,13 @@
 import streamlit as st
 
-page_image = './assets/img/house.png'
+page_image = 'https://www.shutterstock.com/image-vector/illustration-simple-house-isolated-on-600nw-1937900650.jpg'
+icon_link = 'https://img.icons8.com/?size=100&id=12229&format=png&color=000000'
 
 def background_img(file):
     style = f"""
     <style>
     .stApp {{
-        background-image: url("{image}");
+        background-image: url("{page_image}");
         background-size: 15%;
         background-position: bottom right;
         background-repeat: no-repeat;
@@ -14,14 +15,6 @@ def background_img(file):
     </style>
     """
     st.markdown(style, unsafe_allow_html=True)
-
-def fa_icon():
-    icon_code = """
-    <script src="https://kit.fontawesome.com/8fae13e677.js" crossorigin="anonymous"></script>
-
-    <i class="fa-solid fa-house-chimney-user"></i>
-    """
-    st.markdown(icon_code, unsafe_allow_html=True)
 
 
 class MultiPage:
@@ -32,8 +25,10 @@ class MultiPage:
 
         st.set_page_config(
             page_title = self.app_name,
-            page_icon = fa_icon
+            page_icon = icon_link
         )
+
+        background_img(page_image)
 
     def app_page(self, title, function):
         self.pages.append({"title": title, "function": function})
@@ -42,3 +37,4 @@ class MultiPage:
         st.title(self.app_name)
         page = st.sidebar.radio('Menu', self.pages, format_func=lambda page: page['title'])
         page['function']()
+    
