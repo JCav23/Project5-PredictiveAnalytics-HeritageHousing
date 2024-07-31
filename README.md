@@ -93,22 +93,32 @@ Unfortunately we were unable to confirm hypotheses four and five. While we varie
 ## Rationalizing Machine Learning Tasks based on Business Requirements
 
 *Business Requirement 1*
+
 As a client I would like to view the outcome of the correlation study so that I can better understand how the different features of the data affect the target of the machine learning regression; `SalePrice`. There should be multiple visualisations displaying the features plot againt sale price so I can easily view the results graphically and draw conclusions quickly and efficiently.
 
 *Business Requirement 2*
+
 As a client I would like to be able to accurately predict the sale price for the inherited houses using a machine learning model to perform regression analysis to predict a fixed number based on the features of a house. I would also like to be able to pass new data in to be able to make any new predictions for houses in the future. 
 
 *Business Requirement 3*
+
 As a client I would like an an interactive dashboard to be able to access and view all results of the project, including data visualisations, machine learning pipeline steps, regression results and performance. The dashboard should contain sufficient explanation for all results if not already obviously apparant.
 
 ## ML Business Case
 
-* Heritage Housing's primary goal is to develop a ML model that can acurately predict Sale Price from the 
+* Heritage Housing's primary goal is to develop a ML model that can acurately predict Sale Price from the housing records of the area. While the client understands the property market in her own residential area, using these insights may lead to inaccurate predictions for the houses she has inherited.
+* The ML model will be trained on the publicly available dataset for housing records in Ames, Iowa containing attribute information for each house, and the models output will be the predicted sale price based on these features.
+* The customer requires an interactive dashboard to view the data, plots, and model performance metrics. The dashboard should also allow for inputing records to predict housing prices for any additional houses in the area.
+* There are no ethical or privacy concerns when it comes to using the data as it is a publicly available dataset. 
+* The model success will be determined by the accuracy of its predictions using regression when predicting sale price which will be determined by the R<sup>2</sup> score of the regressor. 
+* Validation of the models performance carried out by training and validating the model on our data that we have split into seperate train and test sets and determining the models ability to generalise for any data without underfitting or overfitting. 
+* The project's success metric will be an R2 score of 0.75 or higher on both the train and test sets. 
 
 ## Dashboard Design
 
 * List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items that your dashboard library supports.
-* Eventually, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type)
+* Eventually, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type
+
 
 ## Bugs
 
