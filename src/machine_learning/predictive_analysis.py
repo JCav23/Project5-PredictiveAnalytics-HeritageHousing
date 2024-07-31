@@ -8,9 +8,7 @@ def predict_sale_price(live_data, ml_pipeline):
     value = float(price.round(1))
     amount = '${:,.2f}'.format(value)
     conclusion_output = (
-        f'## Based on the input data we estimate the house to be worth {amount}'
+        f'* Based on the input data we estimate the house to be worth **{amount}**'
     )
-
     st.write(conclusion_output)
-
-    st.write(probability)
+    st.write(price)

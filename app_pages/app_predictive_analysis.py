@@ -15,6 +15,24 @@ def app_predictive_analysis_page():
         f'* The client is interested in predicting the house sale prices from her 4 inherited houses, and any other house in Ames, Iowa.'
     )
 
+    if st.checkbox("Inspect Inherited Housing Records"):
+        data = load_inherited_dataset()
+        data = data.drop(columns=['EnclosedPorch', 'GarageFinish', 'LotFrontage', 'WoodDeckSF'])
+        st.write(f"* The dataset has {data.shape[0]} rows, across {data.shape[1]} features.\n\n")
+        st.write(data)
+
+    if st.checkbox('Predict Price for Inherited Houses'):
+        data = load_inherited_dataset()
+        for i in range(len(data)):
+            st.write(f"## House {i+1}:")
+            predict_sale_price(data.loc[data.index == i], pipeline)
+
+    st.write('---')
+    st.write(
+        f"* Below you can input the data for the house you would like to predict the `Sale Price` for."
+
+    )
+
     live_data = create_input_widgets()
 
 def create_input_widgets():
