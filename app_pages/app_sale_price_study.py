@@ -71,3 +71,28 @@ def app_sale_price_study():
         title = 'Quality & Condition against Sale Price'
     )
         st.plotly_chart(fig, True)
+
+    st.write('---')
+
+    st.write('## Conclusions')
+    st.success(
+        f"#### Bivariate Analysis\n\n"
+        f"**More detailed conclusion insights can be found within the project notebook** "
+        f"[**HERE**](https://github.com/JCav23/Project5-PredictiveAnalytics-HeritageHousing/blob/main/jupyter_notebooks/02-SalePrice_Study.ipynb)\n\n"
+        f"* `Overall Quality` of the house has a postive effect on the `SalePrice` with higher quality houses being worth more.\n\n"
+        f"* Size of the living area (SqFt), has a strong positive effect on the `SalePrice` meaning the larger the living area, then generally, the more expensive the house.\n\n"
+        f"* Generally the more recently the house was built the more expensive it is\n\n"
+        f"* The data shows that the more expensive houses generally tend to have larger garages."
+    )
+
+    st.success(
+        f"#### Multivariate Analysis - Part 1 (Basement Features)\n\n"
+        f"* The study showed that the larger basements tend to increase the `SalePrice`, with the basement quality also pushing the sale price higher.\n\n"
+        f"* When looking at the size of unfinished basement area doesn't have much impact on `SalePrice` alone,"
+        f" however we can see that the higher quality finish basements have a higher `SalePrice` and less square footage of unfinished basement area\n\n"
+        f"* We can clearly see from the plots the more square footage of finished basement there is the more expensive the house\n\n"
+        f"* Across all plots we can see the general trend is that the higher quality finishes on the basements tend to increase the houses' `SalePrice`"
+        f"\n\n\n"
+        f"#### Multivariate Analysis - Part 2 (Quality & Condition)\n\n"
+        f"* The `Quality` of each house has a strong positive relationship with `SalePrice`, however `Condition` is does not have as much of an effect as expected."
+    )
