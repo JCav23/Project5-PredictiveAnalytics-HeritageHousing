@@ -2,7 +2,7 @@
 
 ## Heritage Housing Issues
 
-Welcome to Heritage Housing, a predictive analytics app designed and developed after being requested by a client to investigate a method of predicting house prices in Ames, Iowa. The app consists of a Machine Learning UI Dashboard created with Streamlit. The various pages explore the business requirements set out by the client including a study of the various data labels & how they correlate against the house sale price. It was created using various Python libraries for machine learning, data analysis and daata visualization. 
+Welcome to Heritage Housing, a predictive analytics app designed and developed after being requested by a client to investigate a method of predicting house prices in Ames, Iowa. The app consists of a Machine Learning UI Dashboard created with Streamlit. The various pages explore the business requirements set out by the client including a study of the various data labels & how they correlate against the house sale price. It was created using various Python libraries for machine learning, data analysis and daata visualisation. 
 
 Along side the dashboard there are multiple Jupyter notebooks outlining all the steps taken during the project from initial data exploration, the correlation study required under the buisness case, and entire workflow for developing a convential machine learning Regression model including data cleaning, feature engineering, modelling, and evaluation.
  
@@ -51,8 +51,6 @@ Although your friend has an excellent understanding of property prices in her ow
 * 1 - The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualisations of the correlated variables against the sale price to show that.
 * 2 - The client is interested in predicting the house sale price from her four inherited houses and any other house in Ames, Iowa.
 * 3 - The client requires a UI dashboard to view the results of our study
-* 4 - The Dashboard should also appropriately explain all results sufficiently 
-
 
 ## Project Hypothesis
 
@@ -90,15 +88,22 @@ Our next three hypotheses will require the finshed and optimized ML model to per
 #### Regression Conclusion
 Our model was able to confirm Hypothesis three as correct, by varying the labels we wished to investigate in this case quality and condition, we were able to confirm that houses with a higher quality and condition have a higher sale price. 
 
-Unfortunately we were unable to confirm hypotheses four and five. While we varied the features we aimed to investigate, our model is not powerful enough to be able to accurately predict the resulting difference in sale price. The features in question in this case number of bedrooms and year the houses were built in, did not prove to have enough importance when fitting and training the model to predict a change in sale price. 
+Unfortunately we were unable to confirm hypotheses four and five. While we varied the features we aimed to investigate, our model is not powerful enough to be able to accurately predict the resulting difference in sale price. The features in question in this case number of bedrooms and year the houses were built in, did not prove to have enough importance when fitting and training the model to predict a change in sale price. Future iteration of the project should be led to strengthen the performance of the model, by futher optimizing hyperparameters with more current versions of the ML Libraries and by collecting more data to work with. 
 
-## The rationale to map the business requirements to the Data Visualisations and ML tasks
+## Rationalizing Machine Learning Tasks based on Business Requirements
 
-* List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.
+*Business Requirement 1*
+As a client I would like to view the outcome of the correlation study so that I can better understand how the different features of the data affect the target of the machine learning regression; `SalePrice`. There should be multiple visualisations displaying the features plot againt sale price so I can easily view the results graphically and draw conclusions quickly and efficiently.
+
+*Business Requirement 2*
+As a client I would like to be able to accurately predict the sale price for the inherited houses using a machine learning model to perform regression analysis to predict a fixed number based on the features of a house. I would also like to be able to pass new data in to be able to make any new predictions for houses in the future. 
+
+*Business Requirement 3*
+As a client I would like an an interactive dashboard to be able to access and view all results of the project, including data visualisations, machine learning pipeline steps, regression results and performance. The dashboard should contain sufficient explanation for all results if not already obviously apparant.
 
 ## ML Business Case
 
-* In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
+* Heritage Housing's primary goal is to develop a ML model that can acurately predict Sale Price from the 
 
 ## Dashboard Design
 
@@ -107,8 +112,8 @@ Unfortunately we were unable to confirm hypotheses four and five. While we varie
 
 ## Bugs
 
-* Pingouin
-* FitFailedWarning - Criterion
+* Pingouin (fixed)
+* FitFailedWarning - Criterion (Fixed)
 
 ## Deployment
 
