@@ -1,46 +1,12 @@
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# ![Heritage Housing Logo](assets/img/house.png)
 
-## Template Instructions
+## Heritage Housing Issues
 
-Welcome,
+Welcome to Heritage Housing, a predictive analytics app designed and developed after being requested by a client to investigate a method of predicting house prices in Ames, Iowa. The app consists of a Machine Learning UI Dashboard created with Streamlit. The various pages explore the business requirements set out by the client including a study of the various data labels & how they correlate against the house sale price. It was created using various Python libraries for machine learning, data analysis and daata visualization. 
 
-This is the Code Institute student template for the Heritage Housing project option in Predictive Analytics. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
+The project was built to address a full business case as led by the client, answering several buisness requirements agreed upon with them. This informative README, the UI dashboard and Jupyter notebooks created during the analysis all discuss how and why conclusions were drawn, and the methods used to achieve them, in varying level of details to cater to audiences with any level of technical knowledge.
 
-You can safely delete the Template Instructions section of this README.md file,  and modify the remaining paragraphs for your own project. Please do read the Template Instructions at least once, though! It contains some important information about the IDE and the extensions we use.
-
-## How to use this repo
-
-1. Use this template to create your GitHub project repo
-
-2. Log into the cloud-based IDE with your GitHub account.
-
-3. On your Dashboard, click on the Create button
-
-4. Paste in the URL you copied from GitHub earlier
-
-5. Click Create
-
-6. Wait for the workspace to open. This can take a few minutes.
-
-7. Open a new terminal and `pip3 install -r requirements.txt`
-
-11. Open the jupyter_notebooks directory and click on the notebook you want to open.
-
-12. Click the kernel button and choose Python Environments.
-
-Note that the kernel says Python 3.8.18 as it inherits from the workspace so it will be Python-3.8.18 as installed by our template. To confirm this you can use `! python --version` in a notebook code cell.
-
-## Cloud IDE Reminders
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In your Cloud IDE, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with *Regenerate API Key*.
+The live site can be found [HERE](https://heritage-housing-prices-d6811e354989.herokuapp.com/)
 
 ## Dataset Content
 
@@ -83,27 +49,35 @@ Although your friend has an excellent understanding of property prices in her ow
 * 1 - The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualisations of the correlated variables against the sale price to show that.
 * 2 - The client is interested in predicting the house sale price from her four inherited houses and any other house in Ames, Iowa.
 
-## Hypothesis and how to validate?
+## Project Hypothesis
 
 *Hypothesis One*
-- It is considered that the Lot area of the property would correlate positvely with the sale price. 
+- It is considered that the Lot area of the property would correlate positvely with the sale price.
+- Conclusion: Correct 
 
 *Hypothesis Two*
 - It is considered that the overall condition of the property would positively correlate with the sale price.
+- Conclusion: Correct
 
 *Hypothesis Three*
 -  It is considered that houses with a similar square footing but higher overall quality of materials and finish and a higher overall condition would have a higher sales price.
+- Conclusion: Correct
 
 *Hypothesis Four*
 -  It is considered that those houses in a similar condition but with a higher number of bedrooms above grade, would have a higher sales price
+- Conclusion: Unconfirmed
 
 *Hypothesis Five*
-- It is considered that houses of a similar size and number of bedrooms would have a higher sale price the more recently they were built. 
+- It is considered that houses of a similar size and number of bedrooms would have a higher sale price the more recently they were built.
+- Conclusion: Unconfirmed
 
-### Validation
+### Hypothesis Validation
 
 #### Correlation Analysis
 For hypotheses one and two, the easiest way to validate these will be through the correlation study carried out as part of addressing the first part of our business requirement. By using the Pearson & Spearman methods to calculate correlation levels for the features within our dataset and by generating heatmaps for the results we will be able to clearly confirm for each hypothesis whether the specified features are correlated or not as we assume.
+
+#### Correlation Conclusion
+Hypotheses One & Two were both confirmed as correct during our correlation study, details of which can be found in the dashboard or the jupyter notebooks. Plots were generated to display the features considered in our hypotheses against the Sale Price, which showed a positive correlation.
 
 #### Regression Analysis 
 Our next three hypotheses will require the finshed and optimized ML model to perform a regression analysis for the selected features. We can then specify the features we wish to keep the same and which we want to vary in order to test our hypotheses to confirm our deny our assumptions. 
@@ -147,9 +121,6 @@ Our next three hypotheses will require the finshed and optimized ML model to per
 
 ## Credits
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism.
-* You can break the credits section up into Content and Media, depending on what you have included in your project.
-
 ### Content
 
 * The text for the Home page was taken from Wikipedia Article A
@@ -161,8 +132,5 @@ Our next three hypotheses will require the finshed and optimized ML model to per
 * The photos used on the home and sign-up page are from This Open Source site
 * The images used for the gallery page were taken from this other open-source site
 
-## Acknowledgements (optional)
 
-
-* In case you would like to thank the people that provided support through this project.
 
