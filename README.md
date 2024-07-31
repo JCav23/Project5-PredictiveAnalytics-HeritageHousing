@@ -4,6 +4,8 @@
 
 Welcome to Heritage Housing, a predictive analytics app designed and developed after being requested by a client to investigate a method of predicting house prices in Ames, Iowa. The app consists of a Machine Learning UI Dashboard created with Streamlit. The various pages explore the business requirements set out by the client including a study of the various data labels & how they correlate against the house sale price. It was created using various Python libraries for machine learning, data analysis and daata visualization. 
 
+Along side the dashboard there are multiple Jupyter notebooks outlining all the steps taken during the project from initial data exploration, the correlation study required under the buisness case, and entire workflow for developing a convential machine learning Regression model including data cleaning, feature engineering, modelling, and evaluation.
+ 
 The project was built to address a full business case as led by the client, answering several buisness requirements agreed upon with them. This informative README, the UI dashboard and Jupyter notebooks created during the analysis all discuss how and why conclusions were drawn, and the methods used to achieve them, in varying level of details to cater to audiences with any level of technical knowledge.
 
 The live site can be found [HERE](https://heritage-housing-prices-d6811e354989.herokuapp.com/)
@@ -48,6 +50,9 @@ Although your friend has an excellent understanding of property prices in her ow
 
 * 1 - The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualisations of the correlated variables against the sale price to show that.
 * 2 - The client is interested in predicting the house sale price from her four inherited houses and any other house in Ames, Iowa.
+* 3 - The client requires a UI dashboard to view the results of our study
+* 4 - The Dashboard should also appropriately explain all results sufficiently 
+
 
 ## Project Hypothesis
 
@@ -81,6 +86,11 @@ Hypotheses One & Two were both confirmed as correct during our correlation study
 
 #### Regression Analysis 
 Our next three hypotheses will require the finshed and optimized ML model to perform a regression analysis for the selected features. We can then specify the features we wish to keep the same and which we want to vary in order to test our hypotheses to confirm our deny our assumptions. 
+
+#### Regression Conclusion
+Our model was able to confirm Hypothesis three as correct, by varying the labels we wished to investigate in this case quality and condition, we were able to confirm that houses with a higher quality and condition have a higher sale price. 
+
+Unfortunately we were unable to confirm hypotheses four and five. While we varied the features we aimed to investigate, our model is not powerful enough to be able to accurately predict the resulting difference in sale price. The features in question in this case number of bedrooms and year the houses were built in, did not prove to have enough importance when fitting and training the model to predict a change in sale price. 
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
 
