@@ -7,7 +7,7 @@ from src.data_access import load_house_dataset
 sns.set_style("darkgrid")
 
 def app_sale_price_study():
-
+    
     data = load_house_dataset()
     data = data.drop(columns=['EnclosedPorch', 'GarageFinish', 'LotFrontage', 'WoodDeckSF'])
     data = data.dropna()
@@ -50,6 +50,7 @@ def app_sale_price_study():
             st.pyplot(fig)
 
     if st.checkbox('Basement Features against SalePrice'):
+        st.write('**Please use Plotly controls to examine chart in more detail**')
         fig = px.scatter_matrix(data_frame=data,
                         dimensions=["SalePrice", "TotalBsmtSF", "BsmtUnfSF", "BsmtFinSF1"],
                         color='BsmtFinType1'
@@ -60,12 +61,13 @@ def app_sale_price_study():
             hovermode='closest'
         )
         fig.update_traces(diagonal_visible=False)
-        st.plotly_chart(fig)
+        st.plotly_chart(fig, True)
 
     if st.checkbox('Quality & Condition correlation against SalePrice'):
+        st.write('**Please use Plotly controls to examine chart in more detail**')
         fig = px.scatter_3d(data, x='OverallQual', y='SalePrice', z='OverallCond', 
                     color_discrete_sequence=px.colors.qualitative.Bold)
         fig.update_layout(
         title = 'Quality & Condition against Sale Price'
     )
-        st.plotly_chart(fig)
+        st.plotly_chart(fig, True)
