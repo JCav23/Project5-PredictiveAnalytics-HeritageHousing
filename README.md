@@ -114,17 +114,45 @@ As a client I would like an an interactive dashboard to be able to access and vi
 * Validation of the models performance carried out by training and validating the model on our data that we have split into seperate train and test sets and determining the models ability to generalise for any data without underfitting or overfitting. 
 * The project's success metric will be an R2 score of 0.75 or higher on both the train and test sets. 
 
+### Crisp-DM
+The workflow used throughout the project development complies with the cross-industry standard process for data mining or Crisp-DM. which is an open standard process model widely used within data analytics and data mining. It outlines the 6 stages used to provide a reliable and repeatable process within data science projects. These 6 steps are what help define our workflow and include Business Understanding, Data Understanding, Data Preparation, Modelling, Evaluation, Deployment
+
+![Crisp-DM](https://miro.medium.com/v2/resize:fit:640/format:webp/1*sicHaDLyHRGuJm9eZTaHNw.png)
+
+**Buisness Understanding**
+
+The project goal was to produce a conventional machine learning regression model to successful predict housing prices based on records from the area. This is so the client who had inherited 4 house would be able to accurately predict their sale value. 
+
+**Data Understanding**
+
+The dataset was a publicly available dataset from Kaggle, an online platform for the data science and machine learning practitioner community. The data described various features of ~1400 houses in Ames, Iowa such as the number of bedrooms above ground, quality and condition of the houses, garage and basement details, and size of the building and property extents.
+
+**Data Preperation**
+
+The data was preprocess and cleaned to handle any features with missing values, encode categorical features, handle outlying values, and scale features appropriately, all to improve performance of the ML model. The data was then split into train and sets to train and validate the models performance.
+
+**Modelling**
+
+The business requirements showed that the model needed to perform a regression analysis to predict the sale price. The `ExtraTreesRegressor`; extended random decision forest model was chosen through cross validation searchs completed by SciKit Learn's `GridSearchCV` module. Hyperparameter optimization was then carried out to assess the optimal configuration of the model. A second pipeline was developed implementing Principle Componant Analysis, however this was shown to not perform as well. 
+
+**Evaluation**
+
+The main success metrics used to validate the models performance were the R<sup>2</sup> score for the regressor, and the Mean Absolute Error. The R<sup>2</sup> score threshold to determine a succesful model was outlined by the client and set as `0.75`, which our model exceeded.
+
+**Deployment** 
+
+The model was intergrated into a Streamlit dashboard which allowed for user input to define data for new housing records to make further predictions. The dashboard also displayed the correlation study requested by the client under another business requirement, the prediction for the 4 inherited houses as requested in the buisness requirement, and the model performance metrics.
+
 ## Dashboard Design
 
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items that your dashboard library supports.
-* Eventually, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type
+* 
 
 
 ## Bugs
 
 * Pingouin (fixed)
     * During the feature engineering step of the machine learning work flow, the statistical package Pingouin was installed as part of generating QQ plots during the numerical transformer investigation. However, after the package was installed it became apparent that the most recent version of the package clashed with other dependencies already installed in the project. This was shown when rerunning all cells within the notebook previously successful cell outputs would instead throw errors. The solution was to install an older version of Pingouin which would successfully function alongside other dependicies. However one final issue arose, in which that due to deprecated modules within SciPy that Pingouin scripts utilize, I had to adjust the internal `plotting.py` script from Pingouin, to successfully run my project as desired.
-    
+
 * FitFailedWarning - Criterion (Fixed)
     * During the GridSearchCV process of hyperparameter optimization, the output was returning a `FitFailedWarning`. When deciding upon hyperparameters to optimize I was using the most current version of the SciKit Learn documentation, which lists Criterion as having several acceptable values available. However this project was built on the premade template provided by CodeInstitute, that uses older versions of the project dependencies including SciKit Learn. So after checking the appropriate version of the documentation it became apparent that only `mse` (Mean Square Error) and `mae` (Mean Absolute Error) are acceptable values for the Criterion parameter in this projects version dependency. Investigation was held into possibly using `mae` within the hyperparameter optimization however after it became apparent it drastically increases computational time to unwieldly levels, I decided against including it in the optimization and other parameters were chosen instead.
 
@@ -142,22 +170,33 @@ As a client I would like an an interactive dashboard to be able to access and vi
 5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
 6. If the slug size is too large then add large files not required for the app to the .slugignore file.
 
-## Main Data Analysis and Machine Learning Libraries
+### Main Data Analysis and Machine Learning Libraries
 
-* Here you should list the libraries you used in the project and provide example(s) of how you used these libraries.
+* [NumPy](https://numpy.org/doc/stable/index.html) - Fundamental scientific computing library used for processing data and calculation. Is a major dependency for other libraries such as Pandas and Pingouin
+* [Pandas](https://pandas.pydata.org/docs/index.html) - Python analytics library for handling data primarily in the pandas DataFrame structure
+* [Pingouin](https://pingouin-stats.org/build/html/index.html#) - Statistical Python package used for data analysis and plot generation, written on NumPy & Pandas
+* [Matplotlib](https://matplotlib.org/stable/) - Statistical analysis library for python also used for data visualisations
+* [Seaborn](https://seaborn.pydata.org/index.html) - Data visualisation library for generating statistical graphs (Heatmaps, Jointplots)
+* [Plotly](https://plotly.com/graphing-libraries/) - Data visualisation library for generating interactive graphs (3D scatter, Scatter Matrix).
+* [Scikit Learn](https://scikit-learn.org/stable/) - Library for conventional machine learning model development
+### Other technologies
+[Streamlit](https://docs.streamlit.io/) - Library for building interactive dashboard app
+[Heroku](https://devcenter.heroku.com/) - Used for hosting and deployment of the dashboard
+[Git/GitHub](https://docs.github.com/en) - Version control, and repository storage
 
 ## Credits
 
 ### Content
 
-* The text for the Home page was taken from Wikipedia Article A
-* Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-* The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+* The CodeInstitute Walkthrough project (Churnometer) and the various course material for the various data analytic and machine learning packages were refered to continually throughout development of this project. 
+* https://github.com/van-essa/heritage-housing-issues/tree/main - example reference project provided by mentor
+* [Stack Overflow](https://stackoverflow.com/) - Dozens of different stack overflow pages were refered to during development & troubleshooting.
+* Documentation for the various libraries linked above were all referenced during development of the project & troubleshooting.
 
 ### Media
 
-* The photos used on the home and sign-up page are from This Open Source site
-* The images used for the gallery page were taken from this other open-source site
+* The image of a house used on the dashboard and the readme introduction was obtained from [ShutterStock](https://www.shutterstock.com/) as a stock image.
+* The Crisp-DM diagram was used from medium and is linked directly from the article. 
 
-
-
+#### Acknowledgements 
+* Paige, my other half who has kept me motivated throughout a rollercoaster of a development 
