@@ -228,9 +228,9 @@ During the development of this project, along side adhering to the Crisp-DM proc
 * [Plotly](https://plotly.com/graphing-libraries/) - Data visualisation library for generating interactive graphs (3D scatter, Scatter Matrix).
 * [Scikit Learn](https://scikit-learn.org/stable/) - Library for conventional machine learning model development
 ### Other technologies
-[Streamlit](https://docs.streamlit.io/) - Library for building interactive dashboard app
-[Heroku](https://devcenter.heroku.com/) - Used for hosting and deployment of the dashboard
-[Git/GitHub](https://docs.github.com/en) - Version control, and repository storage
+* [Streamlit](https://docs.streamlit.io/) - Library for building interactive dashboard app
+* [Heroku](https://devcenter.heroku.com/) - Used for hosting and deployment of the dashboard
+* [Git/GitHub](https://docs.github.com/en) - Version control, and repository storage
 
 ## Credits
 
