@@ -143,10 +143,33 @@ The main success metrics used to validate the models performance were the R<sup>
 
 The model was intergrated into a Streamlit dashboard which allowed for user input to define data for new housing records to make further predictions. The dashboard also displayed the correlation study requested by the client under another business requirement, the prediction for the 4 inherited houses as requested in the buisness requirement, and the model performance metrics.
 
+## Agile Methodology
+
+During the development of this project, along side adhering to the Crisp-DM process we also followed the agile methodology. By utilizing Github's Project features to track user stories on a kanban board, we were able to develop in an iterative process implementing each feature based on their could-have, should-have, must-have requirements basis. This meant we were able to prioritize features ensuring the project was able to produce an MVP and then expand upon that. 
+
+![Kanban](assets/img/project_kanban.png)
+
 ## Dashboard Design
 
-* 
+#### Summary Page
+* This page of the project provides a broad overview of the project including details about the dataset, and futher information references directing the user to Kaggle and the Readme to provide more information. 
+* This page also highlights the projects business requirements and a brief jargon section to discuss terms used throughout the project. 
 
+![Summary Page](assets/img/summary_page.png)
+
+#### Sale Price Study
+
+* This page aims to answer the first business requirement relating to the client wanting to understand how the features correlate to `SalePrice`. The introduction provides the business requirement, a checkbox to enable display the raw data and an explanation of how the study was carried out.
+
+![Study introduction](assets/img/study_intro.png)
+
+* The results section features checkboxes to display the various plots generated during the study including two generated using the Plotly library meaning they are interactive and can be manipulated by the user to examine in further detail. The plots generated include a 3D scatter plot, a scatter matrix, and jointplots combining scatter graphs and histograms. 
+
+![Study Results](assets/img/study_results_plot.png)
+
+* Finally there is a section outlining the conclusions drawn during the study, also including a link to the projects Jupyter Notebooks to see the results in more detail. 
+
+![Study Conclusions](assets/img/study_conclusions.png)
 
 ## Bugs
 
@@ -189,7 +212,7 @@ The model was intergrated into a Streamlit dashboard which allowed for user inpu
 ### Content
 
 * The CodeInstitute Walkthrough project (Churnometer) and the various course material for the various data analytic and machine learning packages were refered to continually throughout development of this project. 
-* https://github.com/van-essa/heritage-housing-issues/tree/main - example reference project provided by mentor
+* [Example Heritage Housing](https://github.com/van-essa/heritage-housing-issues/tree/main) - example reference project provided by mentor
 * [Stack Overflow](https://stackoverflow.com/) - Dozens of different stack overflow pages were refered to during development & troubleshooting.
 * Documentation for the various libraries linked above were all referenced during development of the project & troubleshooting.
 
