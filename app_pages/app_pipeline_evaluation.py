@@ -19,8 +19,8 @@ def app_pipeline_performance():
         f"with a target of 0.7 or higher, we were able to consider that our pipeline was successful.\n\n"
         f"* We also trialed a second pipeline integrating Principle Componant Analysis (PCA), "
         f"however it did not perform as well and our orignal pipeline was more successful.\n\n"
-        f"* Below you will find listed the pipeline steps listed, along with the performance metrics, "
-        "and feature importance plots of how much impact the features had on model performance."
+        f"* Below you will find listed the pipeline steps, along with the performance metrics, "
+        "and feature importance plot, representing how much impact the features had on model performance."
     )
     st.write('---')
 

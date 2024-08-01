@@ -32,7 +32,7 @@ def app_hypothesis_validation():
 
     st.success(
         f"#### Hypothesis Three: Correct\n"
-        f"* Using our predictive model we were able to preform a regression analyis and confirm that our prediction was correct and houses that are of higher quality "
+        f"* Using our predictive model we were able to preform a regression analysis and confirm that our prediction was correct and houses that are of higher quality "
         f"and condition are more expensive. Below is the data used to confirm the hypothesis:"
     )
     
@@ -100,7 +100,7 @@ def app_hypothesis_validation():
 
     st.warning(
         f"#### Hypothesis Four: Unconfirmed\n"
-        f"* Using our predictive model we were unable to preform a regression analyis and confirm whether the number of bedrooms affects `SalePrice`. "
+        f"* Using our predictive model we were unable to preform a regression analysis and confirm whether the number of bedrooms affects `SalePrice`. "
         f"Our model is not powerful enough to perform this analysis, so future iterations could expand on this. Below is the data used to confirm the hypothesis"
     )
 
@@ -168,7 +168,7 @@ def app_hypothesis_validation():
 
     st.warning(
         f"#### Hypothesis Five: Unconfirmed\n"
-        f"* Using our predictive model we were unable to preform a succesful analyis and confirm whether the age of the house affects `SalePrice`. "
+        f"* Using our predictive model we were unable to preform a succesful analysis and confirm whether the age of the house affects `SalePrice`. "
         f"Our model is not powerful enough to perform this analysis, so future iterations could expand on this. Below is the data used to confirm the hypothesis"
     )
 

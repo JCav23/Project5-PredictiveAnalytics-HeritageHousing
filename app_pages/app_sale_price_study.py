@@ -29,10 +29,10 @@ def app_sale_price_study():
     st.write('---')
     st.write('## Introduction')
     st.write(
-        f"* As part of the busisness requirement a study was conducted on the correlation levels of the features "
+        f"* As part of the buisness requirement a study was conducted on the correlation levels of the features "
         f"found within the dataset. This was used to better understand how these features correlated to the "
         f"houses' respective **`SalePrice`**. \n\n"
-        f"* Multivariate analysis was carried out to examine how both the Overall `Quality`, and `Condition` "
+        f"* Multivariate analysis was carried out to examine how both the overall `Quality`, and `Condition` "
         f"of the house affects the `Sale Price`\n\n"
         f"* A study was also carried out to examine the effect the size and quality of the Basement can have on "
         f"on `SalePrice`."
@@ -81,7 +81,7 @@ def app_sale_price_study():
         f"[**HERE**](https://github.com/JCav23/Project5-PredictiveAnalytics-HeritageHousing/blob/main/jupyter_notebooks/02-SalePrice_Study.ipynb)\n\n"
         f"* `Overall Quality` of the house has a postive effect on the `SalePrice` with higher quality houses being worth more.\n\n"
         f"* Size of the living area (SqFt), has a strong positive effect on the `SalePrice` meaning the larger the living area, then generally, the more expensive the house.\n\n"
-        f"* Generally the more recently the house was built the more expensive it is\n\n"
+        f"* Generally, the more recently the house was built, the more expensive it is\n\n"
         f"* The data shows that the more expensive houses generally tend to have larger garages."
     )
 
