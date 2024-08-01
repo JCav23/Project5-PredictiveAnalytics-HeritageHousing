@@ -123,14 +123,16 @@ As a client I would like an an interactive dashboard to be able to access and vi
 ## Bugs
 
 * Pingouin (fixed)
+    * During the feature engineering step of the machine learning work flow, the statistical package Pingouin was installed as part of generating QQ plots during the numerical transformer investigation. However, after the package was installed it became apparent that the most recent version of the package clashed with other dependencies already installed in the project. This was shown when rerunning all cells within the notebook previously successful cell outputs would instead throw errors. The solution was to install an older version of Pingouin which would successfully function alongside other dependicies. However one final issue arose, in which that due to deprecated modules within SciPy that Pingouin scripts utilize, I had to adjust the internal `plotting.py` script from Pingouin, to successfully run my project as desired.
+    
 * FitFailedWarning - Criterion (Fixed)
+    * During the GridSearchCV process of hyperparameter optimization, the output was returning a `FitFailedWarning`. When deciding upon hyperparameters to optimize I was using the most current version of the SciKit Learn documentation, which lists Criterion as having several acceptable values available. However this project was built on the premade template provided by CodeInstitute, that uses older versions of the project dependencies including SciKit Learn. So after checking the appropriate version of the documentation it became apparent that only `mse` (Mean Square Error) and `mae` (Mean Absolute Error) are acceptable values for the Criterion parameter in this projects version dependency. Investigation was held into possibly using `mae` within the hyperparameter optimization however after it became apparent it drastically increases computational time to unwieldly levels, I decided against including it in the optimization and other parameters were chosen instead.
 
 ## Deployment
 
 ### Heroku
 
-* The App live link is: <https://YOUR_APP_NAME.herokuapp.com/>
-* Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
+* The App live link is: <https://heritage-housing-prices-d6811e354989.herokuapp.com/>
 * The project was deployed to Heroku using the following steps.
 
 1. Log in to Heroku and create an App
